@@ -1,0 +1,2 @@
+class Stovnertwitter < ApplicationRecord
+end

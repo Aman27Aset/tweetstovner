@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Stovnertwitters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Body</th>
+      <th>Username</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stovnertwitters.each do |stovnertwitter| %>
+      <tr>
+        <td><%= stovnertwitter.body %></td>
+        <td><%= stovnertwitter.username %></td>
+        <td><%= link_to 'Show', stovnertwitter %></td>
+        <td><%= link_to 'Edit', edit_stovnertwitter_path(stovnertwitter) %></td>
+        <td><%= link_to 'Destroy', stovnertwitter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Stovnertwitter', new_stovnertwitter_path %>
